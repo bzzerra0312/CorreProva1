@@ -123,13 +123,78 @@ public class BDSimulado {
 		return resultado;
 		
 		
+		
 				}
-	
+	 public ArrayList<Ligacao> ligacoesPorCliente (String nome){
+	    	ArrayList<Ligacao> resultado = new ArrayList<Ligacao>();
+	    	
+	    	for (int i = 0; i < this.ligacoes.size(); i++) {
+	    		if (this.ligacoes.get(i).getCliente().getNome().equals(nome)) {
+					resultado.add(this.ligacoes.get(i));
+				}
+				
+			}
+	    	return resultado;  
 			
 
 		
 	}
+	 public int ligacoesPorUF(String UF){
+	    	int resultado = 0;
+	    	
+	    	for (int i = 0; i < this.ligacoes.size(); i++) {
+				if (this.ligacoes.get(i).getCliente().getUF().equals(UF)) {
+					resultado++;
+				}
+			}
+	    	
+	    	return resultado;
+}
+	 ArrayList<Integer> ligacoesUFDiferente(){
+		 ArrayList<Integer> resultado = new ArrayList<Integer>();
+		 for (int i = 0; i < this.ligacoes.size(); i++) {
+			 if (this.ligacoes.get(i).getCliente().getUF().equals(this.ligacoes.get(i).getUF())) {
+				 resultado.add(this.ligacoes.get(i).getCodigo());
+				
+			}
 			
+		}
+		return resultado;
+	 }
+
+	 
+	 
+	
+	 public String ContaG(nomeC){
+		 String resultado = "";
+		 
+		 	Cliente c = getInfoCliente(nomeC);
+		 	
+		 	resultado = resultado + "Nome: " + c.getNome() + "CPF: " +
+		 	c.getCPF() + "\n";
+		 	
+		 	ArrayList<Ligacao> a1=ligacoesPorCliente(nomeC);
+		 	
+		 	 	
+		 	
+		 	
+		 
+		 
+		 
+		 
+	 }
+	    	
+	    	
+	 
+	 
+	 
+
+		 
+		 
+	 
+	 
+	 
+
 		
 		
 	

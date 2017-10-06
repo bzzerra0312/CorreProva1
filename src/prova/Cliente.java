@@ -2,6 +2,11 @@ package prova;
 import java.time.LocalDate;
 
 public class Cliente {
+	@Override
+	public String toString() {
+		 return "Nome: " + this.nome + "\n" + "CPF: " + this.CPF;
+	}
+
 	//DN= Data de nascimento, NT= Número de telefone
 	private String nome;
 	private String CPF;
