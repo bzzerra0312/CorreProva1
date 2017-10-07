@@ -2,6 +2,7 @@ package prova;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 
 public class BDSimulado {
@@ -175,6 +176,10 @@ public class BDSimulado {
 		 	
 		 	ArrayList<Ligacao> a1=ligacoesPorCliente(nomeC);
 		 	
+		 	DateTimeFormatter form= DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm");
+		 	for (int i = 0; i < a1.size(); i++) {
+				
+			}
 		 	 	
 		 	
 		 	
